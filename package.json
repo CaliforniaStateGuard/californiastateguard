@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve --https true",
     "build": "vue-cli-service build",
     "postinstall": "npm run build",
-    "start": "node server.js"
+    "start": "node server.js",
+    "deploy": "sh deploy.sh"
   },
   "dependencies": {
     "axios": "^0.24.0",

@@ -4057,7 +4057,8 @@ export default {
           lastName__c: this.form.last_name,
           name: this.form.name,
           password__c: this.form.password,
-          GradeRank__c: this.form.rank
+          GradeRank__c: this.form.rank,
+          isActive__c: true
           // Current_Duty_Assignment__c: this.form.duty,
           // tac__c: this.form.tac,
           // loe__c: this.form.loe,
@@ -4269,6 +4270,7 @@ export default {
           // loe__c: this.form.loe,
           // it__c: this.form.it,
           isAdmin__c: true,
+          isActive__c: true
         };
         mainApi.postServiceMember(data).then((response) => {
           console.log(response);
