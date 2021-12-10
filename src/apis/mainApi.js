@@ -57,7 +57,7 @@ export default class UserForm {
   }
 
   static getServiceMemberInd(uname, upass) {
-    return http.get("data/v52.0/query?q=SELECT FIELDS(ALL) From ServiceMember__c WHERE Name ='" + uname + "' AND Password__c='" + upass + "' AND isActive__c = true LIMIT 200")
+    return http.get("data/v52.0/query?q=SELECT FIELDS(ALL) From ServiceMember__c WHERE Name ='" + uname + "' AND Password__c='" + upass + "' LIMIT 200")
   }
 
   static getCountsService() {
