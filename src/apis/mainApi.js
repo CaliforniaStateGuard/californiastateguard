@@ -49,11 +49,11 @@ export default class UserForm {
   }
 
   static getSMEmail(email) {
-    return http.get("data/v52.0/query?q=SELECT FIELDS(ALL) From ServiceMember__c WHERE Name ='" + email + "' AND isActive__c = true LIMIT 200");
+    return http.get("data/v52.0/query?q=SELECT FIELDS(ALL) From ServiceMember__c WHERE Name ='" + email + "' LIMIT 200");
   }
 
   static checkLogin(name, password) {
-    return http.get("data/v52.0/query?q=SELECT Id, isAdmin__c From ServiceMember__c WHERE Name ='" + name + "' AND Password__c='" + password + "' AND isActive__c = true");
+    return http.get("data/v52.0/query?q=SELECT Id, isAdmin__c From ServiceMember__c WHERE Name ='" + name + "' AND Password__c='" + password + "'");
   }
 
   static getServiceMemberInd(uname, upass) {
